@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+</head>
+<body>
+    <h2>Student Marks</h2>
+    <table border="1">
+        <tr>
+            <th>Reg. No</th>
+            <th>Marks</th>
+            <th>Total</th>
+            <th>Actions</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.reg_no }}</td>
+            <td>{{ student.marks | join(', ') }}</td>
+            <td>{{ student.total }}</td>
+            <td><a href="/delete/{{ student.reg_no }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Add Another Student</a>
+</body>
+</html>

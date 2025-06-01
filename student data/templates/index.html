@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Entry</title>
+</head>
+<body>
+    <h2>Add Student Marks</h2>
+    <form action="/add" method="POST">
+        <label>Registration Number:</label><br>
+        <input type="text" name="reg_no" required><br><br>
+
+        <label>Marks (comma-separated):</label><br>
+        <input type="text" name="marks" required><br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    <br>
+    <a href="/view">View All Students</a>
+</body>
+</html>
